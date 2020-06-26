@@ -31,7 +31,7 @@ Things you may want to cover:
 |password|string|null: false|
 
 ### Association
-- belongs_to :group
+- has_many :tweets
 
 ## groupsテーブル
 
@@ -40,7 +40,8 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- belongs_to :user
+- has_many :users
+- has_many :tweets
 
 ## tweetsテーブル
 
