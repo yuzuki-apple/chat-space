@@ -31,6 +31,11 @@
             おはよう！
     .chat-main_message-forms
         .message-forms_text
-            type a message
+            .text_input
+                type a message
+            .text_picture
+                %label{class: "picture"}
+                    = icon('fas', 'image')
+                    %input{type: "file",class: "form"}
         .message-forms_send
             <a href="#" class="send">Send</a>

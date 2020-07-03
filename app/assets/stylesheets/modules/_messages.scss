@@ -153,6 +153,15 @@
       margin: 20px 15px 20px 40px;
       line-height: 50px;
       padding: 0 10px 0 10px;
+      .text_input{
+        float: left;
+      }
+      .text_picture{
+        float: right;
+        .form{
+          display: none;
+        }
+      }
     }
     .message-forms_send{
       background-color: #38aef0;
