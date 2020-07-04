@@ -1,41 +1,47 @@
 .chat-main
-    .chat-main_group-info
-        .group-info_group-box
-            .group-box_group-name
+    .chat-main__group-info
+        .chat-main__group-info__group-box
+            .chat-main__group-info__group-box__group-name
                 text
-            .group-box_group-member
+            .chat-main__group-info__group-box__group-member
                 Member:yuzuki
-        .group-info_group-edit
-            <a href="#" class="edit">Edit</a>
-    .chat-main_message-list
-        .message-list_n-d-t
-            .n-d-t_name
+        .chat-main__group-info__group-edit
+            =link_to '#',class:"edit" do
+                Edit
+    .chat-main__message-list
+        .chat-main__message-list__n-d-t
+            .chat-main__message-list__n-d-t__name
                 mass
-            .n-d-t_date-time
+            .chat-main__message-list__n-d-t__date-time
                 時間
-        .message-list_coments
+        .chat-main__message-list__coments
             こんにちは！
-        .message-list_n-d-t
-            .n-d-t_name
+        .chat-main__message-list__n-d-t
+            .chat-main__message-list__n-d-t__name
                 misa
-            .n-d-t_date-time
+            .chat-main__message-list__n-d-t__date-time
                 時間
-        .message-list_coments
+        .chat-main__message-list__coments
             こんばんは！
-        .message-list_n-d-t
-            .n-d-t_name
+        .chat-main__message-list__n-d-t
+            .chat-main__message-list__n-d-t__name
                 yuzuki
-            .n-d-t_date-time
+            .chat-main__message-list__n-d-t__date-time
                 時間
-        .message-list_coments
+        .chat-main__message-list__coments
             おはよう！
-    .chat-main_message-forms
-        .message-forms_text
-            .text_input
+    .chat-main__message-forms
+        .chat-main__message-forms__text
+            .chat-main__message-forms__text__input
                 type a message
-            .text_picture
+            .chat-main__message-forms__text__picture
                 %label{class: "picture"}
                     = icon('fas', 'image')
                     %input{type: "file",class: "form"}
-        .message-forms_send
-            <a href="#" class="send">Send</a>
+        .chat-main__message-forms__send
+            =link_to '#',class:"send" do
+                Send
+                
+                
+                
+                

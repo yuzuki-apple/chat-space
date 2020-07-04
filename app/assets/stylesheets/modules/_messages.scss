@@ -7,18 +7,18 @@
 .side-bar{
   width: 300px;
   height: 100vh;
-  .side-bar_user-name{
+  &__user-name{
     background-color: #253141;
     height: 100px;
     width: 100%;
-    .user-name_icon-box{
+    &__icon-box{
       position: relative;
       top: 40px;
       left: 20px;
       width: 260px;
       height: 20px;
       display: flex;
-      .icon-box_name{
+      &__name{
         float: left;
         height: 100%;
         width: 100%;
@@ -26,40 +26,41 @@
         color: #ffffff;
         font-weight: bold;
       }
-      .icon-box_menu{
+      &__menu{
         height: 100%;
         width: 60px;
         
-      }
-        .icon-box_edit-user{
+      
+        &__edit-user{
           float: right;
-          .edit{
+          a{
             color: #ffffff;
             margin-right: 5px;
           }
         }
-        .icon-box_new-group{
+        &__new-group{
           float: right;
-          .new{
+          a{
             color: #ffffff;
           }
         }
       
     }
   }
-  .side-bar_group-list{
+  }
+  &__group-list{
     height:  calc(100% - 100px);
     width: 100%;
     background-color: #2f3e51;
     font-weight: bold;
     color: #ffffff;
     padding-top: 20px;
-    .group-list_group-name{
+    &__group-name{
       width: 100%;
       margin: 0 20px 5px 20px;
       font-size: 15px;
     }
-    .group-list_new-message{
+    &__new-message{
       width: 100%;
       margin: 0 20px 40px 20px;
       font-size: 11px;
@@ -69,30 +70,30 @@
 .chat-main{
   width:  calc(100vw - 300px);
   height: 100vh;
-  .chat-main_group-info{
+  &__group-info {
     height: 100px;
     width: 100%;
     background-color:#ffffff;
     padding: 0 40px;
-    .group-info_group-box{
+    &__group-box {
       float: left;
       width: 120px;
       height: 100%;
-      .group-box_group-name{
+      &__group-name {
         height: 20px;
         color: #333333;
         width: 100%;
         margin: 35px 0 15px 0;
         font-size: 20px;
       }
-      .group-box_group-member{
+      &__group-member {
         height: 30px;
         width: 100%;
         color: #999999;
         font-size: 12px;
       }
     }
-    .group-info_group-edit{
+    &__group-edit {
       float: right;
       position: absolute;
       right: 40px;
@@ -103,24 +104,24 @@
       font-size: 16px;
       border: solid 1px #38aef0;
       line-height: 40px;
-      .edit{
+      .edit {
         text-decoration: none;
         color: #38aef0;
       }
     }
   }
-  .chat-main_message-list{
+  &__message-list {
     width: 100%;
     height: calc(100% - 190px);
     background-color: #fafafa;
     padding-top: 35px;
     padding-left: 40px;
-    .message-list_n-d-t{
+    &__n-d-t {
       display: flex;
       width: 100%;
       height: 16px;
       margin-bottom: 12px;
-      .n-d-t_name{
+      &__name {
         font-size: 16px;
         color: #333333;
         line-height: 16px;
@@ -128,42 +129,42 @@
         margin-right: 10px;
         font-weight: bold;
       }
-      .n-d-t_date-time{
+      &__date-time {
         color: #999999;
         font-size: 12px;
         height: 100%;
       }
     }
-    .message-list_coments{
+    &__coments {
       color: #434A54;
       font-size: 14px;
       margin-bottom: 46px;
     }
     
   }
-  .chat-main_message-forms{
+  &__message-forms {
     width: 100%;
     height: 90px;
     background-color: #d2d2d2;
     display: flex;
-    .message-forms_text{
+    &__text {
       background-color: #ffffff;
       height: 50px;
       width:  calc(100vw - 495px);
       margin: 20px 15px 20px 40px;
       line-height: 50px;
       padding: 0 10px 0 10px;
-      .text_input{
+      &__input{ 
         float: left;
       }
-      .text_picture{
+      &__picture{
         float: right;
         .form{
           display: none;
         }
       }
     }
-    .message-forms_send{
+    &__send{
       background-color: #38aef0;
       height: 50px;
       width: 100px;
