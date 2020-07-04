@@ -1,0 +1,47 @@
+.chat-main
+    .chat-main__group-info
+        .chat-main__group-info__group-box
+            .chat-main__group-info__group-box__group-name
+                text
+            .chat-main__group-info__group-box__group-member
+                Member:yuzuki
+        .chat-main__group-info__group-edit
+            =link_to '#',class:"edit" do
+                Edit
+    .chat-main__message-list
+        .chat-main__message-list__n-d-t
+            .chat-main__message-list__n-d-t__name
+                mass
+            .chat-main__message-list__n-d-t__date-time
+                時間
+        .chat-main__message-list__coments
+            こんにちは！
+        .chat-main__message-list__n-d-t
+            .chat-main__message-list__n-d-t__name
+                misa
+            .chat-main__message-list__n-d-t__date-time
+                時間
+        .chat-main__message-list__coments
+            こんばんは！
+        .chat-main__message-list__n-d-t
+            .chat-main__message-list__n-d-t__name
+                yuzuki
+            .chat-main__message-list__n-d-t__date-time
+                時間
+        .chat-main__message-list__coments
+            おはよう！
+    .chat-main__message-forms
+        .chat-main__message-forms__text
+            .chat-main__message-forms__text__input
+                type a message
+            .chat-main__message-forms__text__picture
+                %label{class: "picture"}
+                    = icon('fas', 'image')
+                    %input{type: "file",class: "form"}
+        .chat-main__message-forms__send
+            =link_to '#',class:"send" do
+                Send
+                
+                
+                
+                
