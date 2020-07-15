@@ -1,0 +1,22 @@
+.chat-main__message-list
+  .chat-main__message-list__n-d-t
+    .chat-main__message-list__n-d-t__name
+      = message.user.name
+    .chat-main__message-list__n-d-t__date-time
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat-main__message-list__coments
+    - if message.content.present?
+      %p.chat-main__message-list__coments__content
+        = message.content
+  = image_tag message.image.url, class: 'picture' if message.image.present?
+
+  -# .upper-message
+  -#   .upper-message__user-name
+  -#     = message.user.name
+  -#   .upper-message__date
+  -#     = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  -# .lower-message
+  -#   - if message.content.present?
+  -#     %p.lower-message__content
+  -#       = message.content
+  -#   = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
