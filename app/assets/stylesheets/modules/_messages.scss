@@ -151,23 +151,32 @@
     height: 90px;
     background-color: #d2d2d2;
     display: flex;
-    &__text {
+    #new_message{
+      display: flex;
+      width: 100%;
+      .chat-main__message-forms__text {
       background-color: #ffffff;
       height: 50px;
-      width:  calc(100vw - 495px);
+      width:  100%;
       margin: 20px 15px 20px 40px;
       line-height: 50px;
       padding: 0 10px 0 10px;
+      position: relative;
+      // display: flex;
       &__input{ 
-        float: left;
+        width: 100%;
+        border-style: none;
       }
       &__picture{
-        float: right;
+        position: absolute;
+        right: 10px;
+        top: 0px;
         .form{
           display: none;
         }
       }
     }
+  }
     &__send{
       background-color: #38aef0;
       height: 50px;
@@ -176,9 +185,9 @@
       line-height: 50px;
       text-align: center;
       border: solid 1px #333333;
+      color: #ffffff;
       .send{
-        text-decoration: none;
-        color: #ffffff;
+        border-style: none;
       }
     }
   }
