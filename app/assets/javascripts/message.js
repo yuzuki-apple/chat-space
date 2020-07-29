@@ -4,38 +4,40 @@ $(function(){
      var html =
       `
          <div class="chat-main__message-list__n-d-t" data-message-id=${message.id}>
-           <div class="chat-main__message-list__n-d-t__name">
-             ${message.user_name}
+           <div class="flex">
+              <div class="chat-main__message-list__n-d-t__name">
+                ${message.user_name}
+              </div>
+              <div class="chat-main__message-list__n-d-t__date-time">
+                ${message.created_at}
+              </div>
            </div>
-           <div class="chat-main__message-list__n-d-t__date-time">
-             ${message.created_at}
+           <div class="chat-main__message-list__coments">
+            <p class="chat-main__message-list__coments__content">
+              ${message.content}
+            </p>
            </div>
-         </div>
-         <div class="chat-main__message-list__coments">
-           <p class="chat-main__message-list__coments__content">
-             ${message.content}
-           </p>
-         </div>
-         <img src=${message.image} >
-       </div>`
+           <img src=${message.image} >
+         </div>`
      return html;
    } else {
      var html =
       `
          <div class="chat-main__message-list__n-d-t"  data-message-id=${message.id}>
-           <div class="chat-main__message-list__n-d-t__name">
-             ${message.user_name}
+           <div class="flex">
+              <div class="chat-main__message-list__n-d-t__name">
+                ${message.user_name}
+              </div>
+              <div class="chat-main__message-list__n-d-t__date-time">
+                ${message.created_at}
+              </div>
            </div>
-           <div class="chat-main__message-list__n-d-t__date-time">
-             ${message.created_at}
+           <div class="chat-main__message-list__coments">
+            <p class="chat-main__message-list__coments__content">
+              ${message.content}
+            </p>
            </div>
-         </div>
-         <div class="chat-main__message-list__coments">
-           <p class="chat-main__message-list__coments__content">
-             ${message.content}
-           </p>
-         </div>
-       </div>`
+         </div>`
      return html;
    };
  }
@@ -67,7 +69,7 @@ $(function(){
   }); 
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    var last_message_id = $('.message:last').data("message-id");
+    var last_message_id = $('.chat-main__message-list__n-d-t:last').data("message-id");
     $.ajax({
       //ルーティングで設定した通りのURLを指定
       url: "api/messages",

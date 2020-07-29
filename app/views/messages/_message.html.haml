@@ -1,13 +1,14 @@
-.chat-main__message-list__n-d-t
-  .chat-main__message-list__n-d-t__name
-    = message.user.name
-  .chat-main__message-list__n-d-t__date-time
-    = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-.chat-main__message-list__coments{data: {message: {id: message.id}}}
-  - if message.content.present?
-    %p.chat-main__message-list__coments__content
-      = message.content
-  = image_tag message.image.url, class: 'picture' if message.image.present?
+.chat-main__message-list__n-d-t{data: {message: {id: message.id}}}
+  .flex
+    .chat-main__message-list__n-d-t__name
+      = message.user.name
+    .chat-main__message-list__n-d-t__date-time
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat-main__message-list__coments
+    - if message.content.present?
+      %p.chat-main__message-list__coments__content
+        = message.content
+    = image_tag message.image.url, class: "chat-main__message-list__coments__content" if message.image.present?
 
   -# .upper-message
   -#   .upper-message__user-name
